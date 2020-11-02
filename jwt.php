@@ -6,7 +6,7 @@ $packag_id  = $_GET['packag_id'];
 
 use Firebase\JWT\JWT;
 
-  require_once '/php-jwt-master/src/JWT.php';
+  require_once './php-jwt-master/src/JWT.php';
   $time = time();
   $key = "orion789";
   $keylog = array(
