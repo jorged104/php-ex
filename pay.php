@@ -53,7 +53,7 @@ $res = json_decode($result);
     var url = "https://blockchain.info/tobtc?currency=USD&value="+decode.price; 
   $.get(url, function(data){
     $('#btc').val(data);
-    var urlcom = '/jwt.php?price='+data+'&address='+addr+'&preuser_id='+decode.preuser_id+'&packag_id='+decode.packag_id;
+    var urlcom = '/on/jwt.php?price='+data+'&address='+addr+'&preuser_id='+decode.preuser_id+'&packag_id='+decode.packag_id;
      $.get(urlcom,function(data){
          console.log(urlcom);
      });
