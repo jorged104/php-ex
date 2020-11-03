@@ -50,6 +50,7 @@ $res = json_decode($result);
     let searchParams = new URLSearchParams(window.location.search)
     const token = searchParams.get('token');
     var decode = parseJwt(token);
+    decode = decode.data;
     var url = "https://blockchain.info/tobtc?currency=USD&value="+decode.price; 
   $.get(url, function(data){
     $('#btc').val(data);
