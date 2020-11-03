@@ -24,7 +24,7 @@ use Firebase\JWT\JWT;
   $jwt = JWT::encode($keylog,$key);
 
   $cURLConnection = curl_init();
-  echo $keylog;
+
     $url = "https://orionblackinternationalcapital.com/payments/confirmation?token=".$jwt;
 
     curl_setopt($cURLConnection, CURLOPT_URL, $url);
