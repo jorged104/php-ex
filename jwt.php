@@ -33,5 +33,5 @@ use Firebase\JWT\JWT;
     curl_close($cURLConnection);
 
     $jsonArrayResponse = json_decode($phoneList);
-    print_r($phoneList);
+    
 ?>
