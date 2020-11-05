@@ -100,7 +100,7 @@ $res = json_decode($result);
                 </div>
             </div>
             <br/>
-            <button class="btn btn-success btn-lg btn-block"  onclick="close();">Confirmar Pago</button>
+            
         </div>
     </div>
 </div>
