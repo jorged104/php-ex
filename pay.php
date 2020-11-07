@@ -2,7 +2,7 @@
 $randomNumber = rand(); 
  //$ch = curl_init("https://foodsdnd.co:8183/External/crearCuenta");
  $url = "https://foodsdnd.co:8183/External/crearCuenta";
- $payload =  array( "uid"=> "y8hp834zdKXfCSo6buSSvP1ZoPm2" , "label"=>$randomNumber , "moneda" => "BTC" );
+ $payload =  array( "uid"=> "8BuB0L6dstevhmf1436vSmXPWmR2" , "label"=>$randomNumber , "moneda" => "BTC" );
 
  $postdata = http_build_query($payload);
  $opts = array('http' =>
