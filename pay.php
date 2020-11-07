@@ -1,26 +1,14 @@
 <?php 
-$randomNumber = rand(); 
- //$ch = curl_init("https://foodsdnd.co:8183/External/crearCuenta");
- $url = "https://foodsdnd.co:8183/External/crearCuenta";
- $payload =  array( "uid"=> "8BuB0L6dstevhmf1436vSmXPWmR2" , "label"=>$randomNumber , "moneda" => "BTC" );
-
- $postdata = http_build_query($payload);
- $opts = array('http' =>
- array(
-     'method'  => 'POST',
-     'header'  => 'Content-type: application/x-www-form-urlencoded',
-     'content' => $postdata
- )
-);
-$context = stream_context_create($opts);
-
-//curl_setopt( $ch, CURLOPT_POSTFIELDS, $payload );
- //curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
- //curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
- //$result = curl_exec($ch);
- //curl_close($ch);
-// print_r($result);
-$result = file_get_contents($url, false, $context);
+ $randomNumber = rand(); 
+ $ch = curl_init("https://foodsdnd.co:8183/External/crearCuenta");
+ $data =  array( "uid"=> "8BuB0L6dstevhmf1436vSmXPWmR2" , "label"=>$randomNumber , "moneda" => "BTC" );
+ $postData = "uid=y8hp834zdKXfCSo6buSSvP1ZoPm2&label=".$randomNumber."&moneda=BTC";
+ $payload = json_encode($data);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$result = curl_exec($ch);
+curl_close($ch);
 $res = json_decode($result);
 ?>
 
